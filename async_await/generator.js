@@ -7,7 +7,7 @@ class Context {
     this._send = val
   }
   stop () {
-    this.done = done
+    this.done = true
   }
 }
 
@@ -43,7 +43,8 @@ let foo = function () {
   }
 }
 
-console.log(foo().next())
-console.log(foo().next())
-console.log(foo().next())
-console.log(foo().next())
+const res = foo()
+console.log(res.next())
+console.log(res.next())
+console.log(res.next())
+console.log(res.next())
